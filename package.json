@@ -1,0 +1,24 @@
+{
+  "name": "votifier-js",
+  "version": "0.0.1",
+  "description": "A Votifier protocol v2 client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minecrafter/votifier2-js.git"
+  },
+  "keywords": [
+    "votifier",
+    "minecraft"
+  ],
+  "author": "Tux <write@imaginarycode.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minecrafter/votifier-js/issues"
+  },
+  "homepage": "https://github.com/minecrafter/votifier-js",
+  "dependencies": {}
+}
