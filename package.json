@@ -1,5 +1,5 @@
 {
-  "name": "votifier-js",
+  "name": "votifier2",
   "version": "0.0.1",
   "description": "A Votifier protocol v2 client",
   "main": "index.js",

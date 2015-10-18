@@ -1,14 +1,15 @@
-# votifier-js
+# votifier2
 
 This library supports network protocol v2 of the [Votifier](http://dev.bukkit.org/bukkit-plugins/votifier/) plugin.
 
 ## Installation
 
-`npm install --save votifier-js`
+`npm install --save votifier2`
 
 ## Usage
 
-    var vote = require('votifier-js');
+```js
+    var vote = require('votifier2');
 
     var options = {
         host: '127.0.0.1',
