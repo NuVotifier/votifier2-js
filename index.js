@@ -1,7 +1,7 @@
 var crypto = require('crypto');
 var net = require('net');
 
-function createMessage(header, vote) {
+function createMessage(header, vote, options) {
     var data = header.split(' ');
 
     if (data.length != 3) {
@@ -37,7 +37,7 @@ module.exports = exports = function vote(options, cb) {
             cb(new Error('Unexpected error'));
         };
         socket.once('end', returnError);
-        socket.write(createMessage(buf.toString(), vote));
+        socket.write(createMessage(buf.toString(), vote, options));
         socket.once('data', function (respBuf) {
             var resp = JSON.parse(respBuf.toString());
             socket.removeListener('end', returnError);

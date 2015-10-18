@@ -17,7 +17,7 @@ This library supports network protocol v2 of the [Votifier](http://dev.bukkit.or
         vote: {
             username: 'USERNAME',
             address: '127.0.0.1',
-            timestamp: new Date().toString(),
+            timestamp: new Date().getTime(),
             serviceName: 'TestService'
         }
     };
