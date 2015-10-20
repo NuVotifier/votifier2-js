@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/minecrafter/votifier2-js.git"
+    "url": "https://github.com/NuVotifier/votifier2-js.git"
   },
   "keywords": [
     "votifier",
@@ -17,8 +17,8 @@
   "author": "Tux <write@imaginarycode.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/minecrafter/votifier-js/issues"
+    "url": "https://github.com/NuVotifier/votifier2-js/issues"
   },
-  "homepage": "https://github.com/minecrafter/votifier-js",
+  "homepage": "https://github.com/NuVotifier/votifier2-js",
   "dependencies": {}
 }
