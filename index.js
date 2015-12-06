@@ -32,6 +32,9 @@ module.exports = exports = function vote(options, cb) {
     }
 
     var socket = net.createConnection(options.port, options.host);
+    socket.on('error', function(err){
+        cb(new Error('Socket error: '+err))
+    });
     socket.once('data', function (buf) {
         var returnError = function () {
             cb(new Error('Unexpected error'));
