@@ -40,7 +40,12 @@ module.exports = exports = function vote(options, cb) {
             cb(new Error('Unexpected error'));
         };
         socket.once('end', returnError);
-        socket.write(createMessage(buf.toString(), vote, options));
+        try {
+            var message = createMessage(buf.toString(), vote, options);
+        } catch (e){
+            return cb(e);
+        }
+        socket.write(message);
         socket.once('data', function (respBuf) {
             var resp = JSON.parse(respBuf.toString());
             socket.removeListener('end', returnError);
