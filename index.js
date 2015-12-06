@@ -32,13 +32,18 @@ module.exports = exports = function vote(options, cb) {
     }
 
     var socket = net.createConnection(options.port, options.host);
+    var returnError = function () {
+        cb(new Error('Unexpected error'));
+    };
+    socket.setTimeout(2000, function(){
+        socket.removeListener('end', returnError);
+        socket.end();
+        cb(new Error("Socket timeout"));
+    });
     socket.on('error', function(err){
         cb(new Error('Socket error: '+err))
     });
     socket.once('data', function (buf) {
-        var returnError = function () {
-            cb(new Error('Unexpected error'));
-        };
         socket.once('end', returnError);
         try {
             var message = createMessage(buf.toString(), vote, options);
