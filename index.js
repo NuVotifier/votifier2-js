@@ -24,11 +24,11 @@ function createMessage(header, vote, options) {
 
 module.exports = exports = function vote(options, cb) {
     if (!options.host || !options.port || !options.token || !options.vote) {
-        return cb(new Error("missing host, port, token, or vote in 'server'"));
+        throw new Error("missing host, port, token, or vote in 'server'");
     }
     var vote = options.vote;
     if (!vote.username || !vote.address || !vote.timestamp || !vote.serviceName) {
-        return cb(new Error("missing username, address, timestamp, or serviceName in 'vote'"));
+        throw new Error("missing username, address, timestamp, or serviceName in 'vote'");
     }
 
     var socket = net.createConnection(options.port, options.host);

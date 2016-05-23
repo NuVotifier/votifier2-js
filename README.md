@@ -1,6 +1,6 @@
 # votifier2
 
-This library supports network protocol v2 of the [Votifier](http://dev.bukkit.org/bukkit-plugins/votifier/) plugin.
+This library supports network protocol v2 of the [NuVotifier](https://www.spigotmc.org/resources/nuvotifier.13449/) plugin.
 
 ## Installation
 
