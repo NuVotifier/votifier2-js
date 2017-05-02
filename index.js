@@ -15,7 +15,7 @@ function createMessage(header, vote, options) {
     var sig = digest.digest('base64');
 
     var message = JSON.stringify({payload: JSON.stringify(vote), signature: sig});
-    var messageBuffer = new Buffer(message.length + 4);
+    var messageBuffer = Buffer.alloc(message.length + 4);
     messageBuffer.writeUInt16BE(0x733a);
     messageBuffer.writeUInt16BE(message.length, 2);
     messageBuffer.write(message, 4);
